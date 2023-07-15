@@ -1,0 +1,93 @@
+:root {
+    --light_text: white;
+    --dark_text: black;
+
+    --desktop: normal 1rem/1;
+    --desktop_small: normal 0.75rem/1;
+    --desktop_title: normal 1.5rem/1;
+    --phone: normal 0.75rem/1;
+    --phone_small: normal 0.5rem/1;
+    --phone_title: normal 1rem/1;
+    font: var(--desktop);
+
+    --border: solid #D1D2DD 3px;
+    --radius: 25px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Inter, Arial, sans sérif;
+    background-image: linear-gradient(45deg, #859FED, #E32DF395);
+    min-height: 100vh;
+    margin: 0;
+}
+
+a {
+    color: var(--light_text);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: var(--dark_text);
+}
+
+/********************************************************* Header ******************************************/
+header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    padding: 20px;
+}
+
+header img {
+    cursor: pointer;
+}
+
+#logo {
+    grid-column: 2;
+    justify-self: center;
+}
+
+#account {
+    grid-column: 3;
+    justify-self: end;
+}
+
+#account img {
+    height: 50px;
+}
+
+/********************************************************* Section (home) ************************************/
+section {
+    flex: 1;
+    margin: 0 20px;
+    border-radius: var(--radius);
+}
+
+/********************************************************* Main (jeu) ****************************************/
+main {
+    flex: 1;
+    margin: 0 20px;
+    border: var(--border);
+    border-radius: var(--radius);
+}
+
+/********************************************************* Footer ******************************************/
+footer {
+    display: flex;
+    background-color: #EB6565;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+footer > span {
+    color: var(--light_text);
+}

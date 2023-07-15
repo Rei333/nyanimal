@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>Document</title>
-        <link rel="stylesheet" href="common.css">
+        <title>Home</title>
+        <link rel="stylesheet" href="css/common.css">
     </head>
 
     <body>
-        <h1>coucou</h1>
-        <p>ceci est un paragraphe nul</p>
-        <div>div vide</div>
+        <?php include "header.php" ?>
 
-        <div><?php echo "hgf" ?></div>
+        <section>
+            Démo
+        </section>
+
+        <?php include "footer.php" ?>
     </body>
 </html>
