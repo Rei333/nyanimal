@@ -1,0 +1,26 @@
+section {
+    height: fit-content;
+    width: 80%;
+}
+
+#identification, #identification > div, form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#identification {    
+    background-color: var(--section);
+    gap: 15px;
+    padding: 10px 0;
+    border-radius: var(--radius);
+}
+
+form, #identification > div {
+    gap: 10px;
+}
+
+#identification > div > a {
+    font-style: italic;
+}

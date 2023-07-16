@@ -1,27 +1,45 @@
 :root {
     --light_text: white;
     --dark_text: black;
+    --section: #3B4595;
+    --button: #859FED;
 
-    --desktop: normal 1rem/1;
-    --desktop_small: normal 0.75rem/1;
-    --desktop_title: normal 1.5rem/1;
-    --phone: normal 0.75rem/1;
-    --phone_small: normal 0.5rem/1;
-    --phone_title: normal 1rem/1;
+    --desktop: normal 1rem/1 "Inter";
+    --desktop_small: normal 0.75rem/1 "Inter";
+    --desktop_title: bold 1.5rem/1 "Inter";
+    --phone: normal 0.75rem/1 "Inter";
+    --phone_small: normal 0.5rem/1 "Inter";
+    --phone_title: normal 1rem/1 "Inter";
     font: var(--desktop);
 
     --border: solid #D1D2DD 3px;
     --radius: 25px;
 }
 
+@font-face {
+	font-family: "Inter";
+	src: url("/css/font/static/Inter-Regular.ttf") format(truetype) tech(variations);
+}
+
+@font-face {
+	font-family: "Inter";
+	src: url("/css/font/static/Inter-Bold.ttf") format(truetype) tech(variations);
+	font-weight: bold;
+}
+
 body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-family: Inter, Arial, sans sérif;
     background-image: linear-gradient(45deg, #859FED, #E32DF395);
     min-height: 100vh;
     margin: 0;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    color: var(--light_text);
+    font: var(--desktop_title);
 }
 
 a {
@@ -35,6 +53,27 @@ a:hover {
 
 a:active {
     color: var(--dark_text);
+}
+
+input:not([type="submit"]) {
+    border-radius: var(--radius);
+    padding: 0 5px;
+}
+
+input[type="submit"] {
+    all: unset;
+    background-color: var(--button);
+    color: var(--light_text);
+    padding: 5px 15px;
+    border-radius: var(--radius);
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+input[type="submit"]:active {
+    background-color: #687CB9;
 }
 
 /********************************************************* Header ******************************************/
@@ -63,19 +102,18 @@ header img {
     height: 50px;
 }
 
-/********************************************************* Section (home) ************************************/
-section {
+/********************************************************* Main **********************************************/
+main {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0 20px;
     border-radius: var(--radius);
 }
 
-/********************************************************* Main (jeu) ****************************************/
-main {
-    flex: 1;
-    margin: 0 20px;
+#game {
     border: var(--border);
-    border-radius: var(--radius);
 }
 
 /********************************************************* Footer ******************************************/

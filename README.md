@@ -10,6 +10,4 @@ Note : la taille de la jauge du bonheur varie en fonction de la décoration de l
 Fichier common.css pour le design commun du site.
 
 ### HTML
-Le corps de la page varie selon le type de page du jeu : 
-**main** : pour toutes les pages jouables ;
-**section** : pour toutes les autres pages : accueil, contact, compte...
+**main** → ajouter l'id *game* pour les pages de jeu.
