@@ -12,7 +12,7 @@
 
         <main>
             <section id="identification">
-                <h2>Connexion</h2>
+                <h1>Connexion</h1>
                 <form action="" method="post">
                     <input type="text" name="pseudo" id="pseudo" placeholder="Pseudo">
                     <input type="password" name="password" id="password" placeholder="Mot de passe">
@@ -25,7 +25,7 @@
             </section>
 
             <section id="presentation">
-                <h1>Découvrez Nyanimal en quelques images :</h1>
+                <h2>Découvrez Nyanimal en quelques images :</h2>
                 <div>
                     <img class="left" src="img/logo.png" alt="img1">
                     <div class="right">
@@ -47,8 +47,8 @@
                         Texte texte texte texte texte texte texte texte texte texte texte texte texte texte
                     </div>
                     <div>
-                        Prêt(e) pour l'aventure ?
-                        <div>
+                        <h3>Prêt(e) pour l'aventure ?</h3>
+                        <div id="buttons">
                             <button><a href="">Connexion</a></button>
                             <button><a href="">Inscription</a></button>
                         </div>
