@@ -1,1 +1,1 @@
-RewriteRule ^contact$ contact.php
+RewriteRule ^inscription$ inscription.php
