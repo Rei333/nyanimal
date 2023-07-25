@@ -1,1 +1,2 @@
+RewriteRule ^connexion$ connexion.php
 RewriteRule ^inscription$ inscription.php
