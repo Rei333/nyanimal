@@ -3,6 +3,7 @@
     --dark_text: black;
     --section: #3B4595;
     --button: #859FED;
+    --danger: #EA2929;
 
     --desktop: normal 1rem/1 "Inter";
     --desktop_small: normal 0.75rem/1 "Inter";
@@ -83,7 +84,15 @@ button > a:active {
     color: var(--light_text);
 }
 
-/********************************************************* Header ******************************************/
+button.danger {
+    background-color: var(--danger);
+}
+
+button.danger:active {
+    background-color: #B91414;
+}
+
+/***************************************** Header ****************************************/
 header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -100,16 +109,38 @@ header img {
     justify-self: center;
 }
 
-#account {
+header > div {
     grid-column: 3;
-    justify-self: end;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
 }
 
 #account img {
     height: 50px;
 }
 
-/********************************************************* Main **********************************************/
+#logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0 3px 5px #00000050);
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#logout:active {
+    box-shadow: 0 5px 10px #00000080 inset;
+    filter: none;
+}
+
+#logout img {
+    transform: rotate(90deg);
+}
+/****************************************** Main ***************************************/
 main {
     flex: 1;
     display: flex;
@@ -123,7 +154,7 @@ main {
     border: var(--border);
 }
 
-/********************************************************* Footer ******************************************/
+/***************************************** Footer ************************************/
 footer {
     display: flex;
     background-color: #EB6565;
