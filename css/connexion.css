@@ -11,18 +11,11 @@ h1 {
     color: var(--light_text);
 }
 
-#identification, #identification > div, form {
+#identification > div, form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-#identification {    
-    background-color: var(--section);
-    gap: 15px;
-    padding: 10px 0;
-    border-radius: var(--radius);
 }
 
 form, #identification > div {

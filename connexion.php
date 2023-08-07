@@ -11,7 +11,7 @@
         <?php include "header.php" ?>
 
         <main>
-            <section id="identification">
+            <section id="identification" class="important_section">
                 <h1>Connexion</h1>
                 <form action="" method="post">
                     <input type="text" name="pseudo" id="pseudo" placeholder="Pseudo">

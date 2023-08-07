@@ -1,2 +1,5 @@
 RewriteRule ^connexion$ connexion.php
 RewriteRule ^inscription$ inscription.php
+RewriteRule ^contact$ contact.php
+RewriteRule ^cgu$ cgu.php
+RewriteRule ^legal$ legal.php

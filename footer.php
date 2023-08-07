@@ -1,7 +1,7 @@
 <footer>
-    <span><a href="">Mentions Légales</a></span>
+    <span><a href="/legal">Mentions Légales</a></span>
     <span>-</span>
-    <span><a href="">CGU</a></span>
+    <span><a href="/cgu">CGU</a></span>
     <span>-</span>
-    <span><a href="">Contact</a></span>
+    <span><a href="/contact">Contact</a></span>
 </footer>

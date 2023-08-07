@@ -11,7 +11,7 @@
         <?php include "header.php" ?>
 
         <main>
-            <section>
+            <section class="important_section">
                 <h1>Inscription</h1>
                 <form action="" method="post">
                     <div class="col1 row1" >
@@ -20,7 +20,7 @@
                     </div>
                     <div class="col2 row1" >
                         <label for="mail">E-mail :</label>
-                        <input type="email" name="mail" id="mail" placeholder="Pseudo">
+                        <input type="email" name="mail" id="mail" placeholder="Email">
                     </div>
 
                     <div class="col1 row2">
@@ -30,7 +30,7 @@
 
                     <div class="col2 row2">
                         <input type="checkbox" id="cgu" name="cgu">
-                        <label for="cgu">J'ai lu et j'accepte les <a href="">CGU</a></label>
+                        <label for="cgu">J'ai lu et j'accepte les <a href="/cgu">CGU</a></label>
                     </div>
                     
                     <input type="submit" value="Inscription">

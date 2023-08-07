@@ -37,61 +37,6 @@ body {
     margin: 0;
 }
 
-h1, h2, h3 {
-    margin: 0;
-    font: var(--desktop_title);
-}
-
-input:not([type="submit"]) {
-    border-radius: var(--radius);
-    padding: 0 5px;
-}
-
-input[type="submit"], button {
-    all: unset;
-    background-color: var(--button);
-    color: var(--light_text);
-    padding: 5px 15px;
-    border-radius: var(--radius);
-}
-
-input[type="submit"]:hover, button:hover {
-    cursor: pointer;
-}
-
-input[type="submit"]:active, button:active {
-    background-color: #687CB9;
-}
-
-a {
-    color: var(--light_text);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-a:active {
-    color: var(--dark_text);
-}
-
-button > a:hover {
-    text-decoration: none;
-}
-
-button > a:active {
-    color: var(--light_text);
-}
-
-button.danger {
-    background-color: var(--danger);
-}
-
-button.danger:active {
-    background-color: #B91414;
-}
-
 /***************************************** Header ****************************************/
 header {
     display: grid;
@@ -152,6 +97,76 @@ main {
 
 #game {
     border: var(--border);
+}
+
+.important_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--section);
+    height: fit-content;
+    width: 80%;
+    padding: 10px 0;
+    gap: 20px;
+    color: var(--light_text);
+    border-radius: var(--radius);
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font: var(--desktop_title);
+}
+
+input:not([type="submit"]) {
+    border-radius: var(--radius);
+    padding: 0 5px;
+}
+
+input[type="submit"], button {
+    all: unset;
+    background-color: var(--button);
+    color: var(--light_text);
+    padding: 5px 15px;
+    width: fit-content;
+    border-radius: var(--radius);
+}
+
+input[type="submit"]:hover, button:hover {
+    cursor: pointer;
+}
+
+input[type="submit"]:active, button:active {
+    background-color: #687CB9;
+}
+
+a {
+    color: var(--light_text);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: var(--dark_text);
+}
+
+button > a:hover {
+    text-decoration: none;
+}
+
+button > a:active {
+    color: var(--light_text);
+}
+
+button.danger {
+    background-color: var(--danger);
+}
+
+button.danger:active {
+    background-color: #B91414;
 }
 
 /***************************************** Footer ************************************/
