@@ -1,4 +1,4 @@
-<svg width="75" height="85" viewBox="0 0 75 85" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="37.5" cy="25" r="25" fill="white"/>
-<path d="M75 75.3879C75 86.6478 58.2107 84.9022 37.5 84.9022C16.7893 84.9022 0 86.6478 0 75.3879C0 64.128 16.7893 55 37.5 55C58.2107 55 75 64.128 75 75.3879Z" fill="white"/>
+<svg width="75" height="80" viewBox="0 0 75 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="37.5" cy="22.5" r="22.5" fill="white"/>
+<path d="M75 70.3879C75 81.6478 58.2107 79.9022 37.5 79.9022C16.7893 79.9022 0 81.6478 0 70.3879C0 59.128 16.7893 50 37.5 50C58.2107 50 75 59.128 75 70.3879Z" fill="white"/>
 </svg>
