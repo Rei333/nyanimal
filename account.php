@@ -2,9 +2,9 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>Contact</title>
+        <title>Compte</title>
         <link rel="stylesheet" href="css/common.css">
-        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/account.css">
     </head>
 
     <body>
@@ -12,7 +12,7 @@
 
         <main>
             <section class="important_section">
-                <h1>Contacter le Webmaster</h1>
+                <h1>Mon Compte</h1>
                 <form action="" method="post">
                     <div>
                         <label for="mail">E-mail :</label>
@@ -22,10 +22,9 @@
                         <label for="title">Objet :</label>
                         <input type="text" name="title" id="title" placeholder="Objet">
                     </div>
-                    <label for="message">Message :</label>
-                    <textarea name="message" id="message"></textarea>
                     <div>
                         <input type="submit" value="Envoyer">
+                        <input type="submit" value="Supprimer mon compte">
                     </div>
                 </form>
             </section>

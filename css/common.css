@@ -37,6 +37,29 @@ body {
     margin: 0;
 }
 
+/***************************************** Banner ****************************************/
+#banner {
+    background-color: lightgrey;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+}
+
+#banner div {
+    grid-column: 2;
+    align-self: center;
+    text-align: center;
+    white-space: pre;
+}
+
+#banner img {
+    grid-column: 3;
+    justify-self: end;
+    align-self: center;
+    height: 20px;
+    cursor: pointer;
+}
+
 /***************************************** Header ****************************************/
 header {
     display: grid;

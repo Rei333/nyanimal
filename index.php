@@ -8,12 +8,12 @@
     </head>
 
     <body>
-        <?php include "header.php" ?>
+        <?php require "header.php" ?>
 
         <main id="game">
-           
+
         </main>
 
-        <?php include "footer.php" ?>
+        <?php require "footer.php" ?>
     </body>
 </html>

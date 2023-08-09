@@ -8,7 +8,7 @@
     </head>
 
     <body>
-        <?php include "header.php" ?>
+        <?php require "header.php" ?>
 
         <main>
             <section id="identification" class="important_section">
@@ -57,6 +57,6 @@
             </section>
         </main>
 
-        <?php include "footer.php" ?>
+        <?php require "footer.php" ?>
     </body>
 </html>

@@ -1,3 +1,4 @@
+RewriteRule ^account$ account.php
 RewriteRule ^connexion$ connexion.php
 RewriteRule ^inscription$ inscription.php
 RewriteRule ^contact$ contact.php
