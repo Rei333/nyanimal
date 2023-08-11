@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 
 <?php
-    require "function.php";
     require "config.php";
 
-    $message = null;
     if(isset($_POST["pseudo"]) && isset($_POST["password"]) && isset($_POST["mail"]) && isset($_POST["cgu"])) {
         if(strlen($_POST["pseudo"]) > 2 && strlen($_POST["password"]) > 6 && strlen($_POST["mail"]) > 6 && $_POST["cgu"] == "on") {
             try {
                 $stmt = $db->prepare("INSERT INTO users (pseudo, password, mail) VALUES (?, ?, ?)");
                 $stmt->execute([$_POST["pseudo"], $_POST["password"], $_POST["mail"]]);
-                $message = "Votre compte a bien été créé. Vous pouvez vous connecter.";
+                set_banner_message("Votre compte a bien été créé. Vous pouvez vous connecter.");
             } catch(PDOException $e) {
-                $message = "Le pseudo ou l'email existent déjà, veuillez en choisir un autre.";
+                set_banner_message("Le pseudo ou l'email existent déjà, veuillez en choisir un autre.");
             }
         } else {
-            $message = "Une erreur s'est produite lors de l'inscription.";
+            set_banner_message("Une erreur s'est produite lors de l'inscription.");
         }
     }
 ?>
@@ -29,10 +27,7 @@
     </head>
 
     <body>
-        <?php if(!is_null($message)) {
-            banner($message);
-        }
-        require "header.php" ?>
+        <?php require "header.php"; ?>
 
         <main>
             <section class="important_section">
@@ -65,6 +60,6 @@
             </section>
         </main>
 
-        <?php require "footer.php" ?>
+        <?php require "footer.php"; ?>
     </body>
 </html>

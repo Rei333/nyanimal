@@ -184,11 +184,11 @@ button > a:active {
     color: var(--light_text);
 }
 
-button.danger {
+button.danger, input[type="submit"].danger {
     background-color: var(--danger);
 }
 
-button.danger:active {
+button.danger:active, input[type="submit"].danger:active {
     background-color: #B91414;
 }
 

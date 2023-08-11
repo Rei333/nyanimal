@@ -1,4 +1,22 @@
 <!DOCTYPE html>
+
+<?php
+    require "config.php";
+
+    if(isset($_POST["pseudo"]) && isset($_POST["password"])) {
+        $stmt = $db->prepare("SELECT * FROM users WHERE pseudo = ? AND password = ?");
+        $stmt->execute([$_POST["pseudo"], $_POST["password"]]);
+        $user = $stmt->fetch();
+        if($user) {
+            $_SESSION["id"] = $user["id"];
+            header("Location: /");
+            exit;
+        } else {
+            set_banner_message("Pseudo ou mot de passe incorrect.");
+        }
+    }
+?>
+
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
@@ -8,7 +26,7 @@
     </head>
 
     <body>
-        <?php require "header.php" ?>
+        <?php require "header.php"; ?>
 
         <main>
             <section id="identification" class="important_section">
@@ -57,6 +75,6 @@
             </section>
         </main>
 
-        <?php require "footer.php" ?>
+        <?php require "footer.php"; ?>
     </body>
 </html>

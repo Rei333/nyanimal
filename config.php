@@ -1,4 +1,7 @@
 <?php
+    session_start();
+    require "function.php";
+
     $dbname="nyanimal";
     $dbhost="localhost";
     $dbuser="nyanimal";

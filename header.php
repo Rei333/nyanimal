@@ -1,6 +1,8 @@
+<?php banner(); ?>
+
 <header>
-    <a id="logo" href="index.php"><img src="img/logo.png" alt="logo" title="Jeu"></a>
-    <?php if (true) { ?>
+    <?php if (isset($_SESSION["id"])) { ?>
+        <a id="logo" href="/"><img src="img/logo.png" alt="logo" title="Jeu"></a>
         <div>
             <a id="account" href="/account"><img src="img/user.svg" alt="compte" title="Mon Compte"></a>
             <button class="danger" id="logout">
@@ -9,5 +11,7 @@
                 </a>
             </button>
         </div>
+    <?php } else { ?>
+        <a id="logo" href="/connexion"><img src="img/logo.png" alt="logo" title="Jeu"></a>
     <?php } ?>
 </header>

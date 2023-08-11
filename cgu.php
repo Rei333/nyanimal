@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+
+<?php
+    require "config.php";
+?>
+
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
@@ -8,7 +13,7 @@
     </head>
 
     <body>
-        <?php require "header.php" ?>
+        <?php require "header.php"; ?>
 
         <main>
             <section class="important_section">
@@ -16,6 +21,6 @@
             </section>
         </main>
 
-        <?php require "footer.php" ?>
+        <?php require "footer.php"; ?>
     </body>
 </html>
