@@ -7,7 +7,7 @@
         if(strlen($_POST["pseudo"]) > 2 && strlen($_POST["password"]) > 6 && strlen($_POST["mail"]) > 6 && $_POST["cgu"] == "on") {
             try {
                 $stmt = $db->prepare("INSERT INTO users (pseudo, password, mail) VALUES (?, ?, ?)");
-                $stmt->execute([$_POST["pseudo"], $_POST["password"], $_POST["mail"]]);
+                $stmt->execute([$_POST["pseudo"], password_hash($_POST["password"], PASSWORD_DEFAULT), $_POST["mail"]]);
                 set_banner_message("Votre compte a bien été créé. Vous pouvez vous connecter.");
             } catch(PDOException $e) {
                 set_banner_message("Le pseudo ou l'email existent déjà, veuillez en choisir un autre.");

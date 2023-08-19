@@ -4,10 +4,11 @@
     require "config.php";
 
     if(isset($_POST["pseudo"]) && isset($_POST["password"])) {
-        $stmt = $db->prepare("SELECT * FROM users WHERE pseudo = ? AND password = ?");
-        $stmt->execute([$_POST["pseudo"], $_POST["password"]]);
+        $stmt = $db->prepare("SELECT * FROM users WHERE pseudo = ?");
+        $stmt->execute([$_POST["pseudo"]]);
         $user = $stmt->fetch();
-        if($user) {
+
+        if($user && password_verify($_POST["password"], $user["password"])) {
             $_SESSION["id"] = $user["id"];
             header("Location: /");
             exit;

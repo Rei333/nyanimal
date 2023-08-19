@@ -1,0 +1,169 @@
+#game {
+    position: relative;
+    align-items: start;
+}
+
+
+/**********************************INTERACTIVES ELEMENTS**********************/
+#infos {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+/************Header***********/
+#game_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#gauges {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(4, auto);
+    column-gap: 5px;
+    row-gap: 5px;
+    color: var(--light_text);
+    background-color: #00000080;
+    padding: 10px;
+    border-radius: var(--radius);
+}
+
+.gauge {
+    position: relative;
+    align-self: center;
+    width: 200px;
+}
+
+.gauge > div:first-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gauge > div:last-child {
+    background-color:cadetblue;
+    height: 1rem;
+    border-radius: var(--radius);
+}
+
+#house {
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 50px;
+}
+
+#money {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 15px;
+    background-color: #00000080;
+    color: var(--light_text);
+    border-radius: var(--radius);
+}
+
+#money img {
+    height: 20px;
+}
+
+/****Nyanimal*****/
+#nyanimal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* transform-origin: center; */
+    background-image: url("/img/nyanimal.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    aspect-ratio: 1/1;
+    height: 50%;
+
+}
+
+/******Actions*******/
+#actions {
+    align-self: center;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #00000080;
+    gap: 20px;
+    padding: 20px;
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.action {
+    pointer-events: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: var(--radius);
+}
+
+#feed {
+    background-image: url("/img/user.svg");
+}
+
+#treat {
+    background-image: url("/img/user.svg");
+}
+
+#sleep {
+    background-image: url("/img/user.svg");
+}
+
+#dress {
+    background-image: url("/img/user.svg");
+}
+
+#outside {
+    background-image: url("/img/user.svg");
+}
+
+/*************************************APPARTMENT******************/
+#appartment_view {
+    overflow: scroll;
+    height: 100%;
+    width: 100%;
+}
+
+#appartment {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    width: 2000px;
+    height: 100%;
+}
+
+#wall {
+    grid-row: 1;
+}
+
+#wall {
+    display: flex;
+    align-items: end;
+    position: relative;
+}
+
+#wall, #floor {
+    height: 100%;
+    width: 100%;
+}
+
+#floor {
+    grid-row: 2;
+}

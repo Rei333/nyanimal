@@ -20,4 +20,11 @@
         GLOBAL $banner_message;
         $banner_message = $message;
     }
+
+    function check_connected() {
+        if(!isset($_SESSION["id"])) {
+            header("Location: /connexion");
+            exit;
+        }
+    }
 ?>

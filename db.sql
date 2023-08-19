@@ -15,4 +15,6 @@ CREATE TABLE users (
 
     -- HOUSE
     bedroom BOOL NOT NULL DEFAULT false
-)
+);
+
+INSERT INTO users (pseudo, password, mail) VALUES ("test", "$2y$10$xmbmoDaIkOxEo27KZR.ike5x2MqeNtV2HOOsUppsxvj2ya3jVCBBS", "test@gmail.com");

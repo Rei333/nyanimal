@@ -5,3 +5,5 @@ RewriteRule ^logout$ logout.php
 RewriteRule ^contact$ contact.php
 RewriteRule ^cgu$ cgu.php
 RewriteRule ^legal$ legal.php
+
+RewriteRule ^debug$ debug.php
