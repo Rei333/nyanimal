@@ -16,13 +16,13 @@
     width: 100%;
 }
 
-/************Header***********/
 #game_header {
     display: flex;
     justify-content: space-between;
     padding: 10px;
 }
 
+/************Gauges***********/
 #gauges {
     display: grid;
     grid-template-columns: auto auto;
@@ -54,12 +54,61 @@
     border-radius: var(--radius);
 }
 
-#house {
-    pointer-events: auto;
+/*************House*************/
+#right {
     display: flex;
     flex-direction: column;
     gap: 10px;
     height: 50px;
+}
+
+#triangle {
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-right-width: 50px;
+    border-left-width: 50px;
+    border-bottom: 30px solid #802424;
+}
+
+#house {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: burlywood;
+    width: 100px;
+    height: 50px;
+    padding: 5px;
+    row-gap: 5px;
+    box-sizing: border-box;
+}
+
+#house > div {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+#up {
+    grid-row: 1;
+}
+
+#down {
+    grid-row: 2;
+}
+
+.room {
+    pointer-events: auto;
+    background-color: blue;
+    width: 100%;
+    cursor: pointer;
+}
+
+.active {
+    background-color: chartreuse;
+}
+
+.locked {
+    background-color: lightslategray;
 }
 
 #money {
@@ -77,7 +126,7 @@
     height: 20px;
 }
 
-/****Nyanimal*****/
+/*******Nyanimal**********/
 #nyanimal {
     position: absolute;
     top: 50%;

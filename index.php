@@ -41,8 +41,22 @@
                             <div style="width:50%"></div>
                         </div>
                     </div>
-                    <div id="house">
-                        <img src="img/user.svg" alt="">
+                    <div id="right">
+                        <div>
+                            <div id="triangle"></div>
+                            <div id="house">
+                                <div id="up">
+                                    <div class="room locked" title="Chambre"></div>
+                                    <div class="room locked" title="Bureau"></div>
+                                    <div class="room locked" title="Salle de bain"></div>
+                                </div>
+                                <div id="down">
+                                    <div class="room active" title="Salon"></div>
+                                    <div class="room" title="Cuisine"></div>
+                                    <div class="room locked" title="Salle à manger"></div>
+                                </div>
+                            </div>
+                        </div>
                         <div id="money">
                             <img src="img/user.svg" alt="Argent">
                             120
