@@ -12,6 +12,6 @@
             </button>
         </div>
     <?php } else { ?>
-        <a id="logo" href="/connexion"><img src="img/logo.png" alt="logo" title="Jeu"></a>
+        <a id="logo" href="/connexion"><img src="img/logo.png" alt="logo" title="Connexion"></a>
     <?php } ?>
 </header>

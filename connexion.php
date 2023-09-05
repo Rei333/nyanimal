@@ -50,12 +50,12 @@
                     <div class="right">
                         <h2>Prends soin de ton Nyanimal</h2>
                         Joue avec lui, veille sur lui, gagne de l'argent et décore ta maison !
-                        Plus ton Nyanimal est heureux, plus tu gagnes d'argent, plus ta maison est belle !
+                        Plus ton Nyanimal est heureux, plus tu gagnes d'argent, plus tu pourras décorer ta maison !
                     </div>
 
                     <div class="left">
                         <h2>Habille ton Nyanimal</h2>
-                        Achète à la boutique des habits pour pouvoir personnaliser ton Tamagochi !
+                        Achète à la boutique des habits pour pouvoir personnaliser ton Nyanimal !
                         Texte texte texte texte
                     </div>
                     <img class="right" src="img/logo.png" alt="img1">

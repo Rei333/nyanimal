@@ -1,0 +1,41 @@
+#game {
+    position: relative;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+#game > a {
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    right: 10px;
+    text-decoration: none;
+}
+
+#sky {
+    grid-row: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    background-color: aquamarine;
+    height: 100%;
+}
+
+.batiment {
+    background-color: gray;
+    z-index: 1;
+    width: 100px;
+    height: 60%;
+    margin-bottom: -2%;
+}
+
+.batiment:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 10px white;
+}
+
+#floor {
+    grid-row: 2;
+    background-color: green;
+    height: 100%;
+}

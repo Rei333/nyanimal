@@ -17,4 +17,16 @@ CREATE TABLE users (
     bedroom BOOL NOT NULL DEFAULT false
 );
 
+CREATE TABLE ammeublement (
+    categorie
+    variation
+    prix
+    image
+)
+
+user_meuble (
+    id_user
+    id_meuble
+)
+
 INSERT INTO users (pseudo, password, mail) VALUES ("test", "$2y$10$xmbmoDaIkOxEo27KZR.ike5x2MqeNtV2HOOsUppsxvj2ya3jVCBBS", "test@gmail.com");

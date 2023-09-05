@@ -18,7 +18,7 @@
 
         <main id="game">
             <div id="infos">
-                <div id="game_header">
+                <section id="game_header">
                     <div id="gauges">
                         <div>Energie :</div>
                         <div class="gauge">
@@ -32,8 +32,8 @@
                         </div>
                         <div>Bonheur :</div>
                         <div class="gauge">
-                            <div>0%</div>
-                            <div style="width:0%"></div>
+                            <div>100%</div>
+                            <div style="width:100%"></div>
                         </div>
                         <div>Santé :</div>
                         <div class="gauge">
@@ -41,43 +41,43 @@
                             <div style="width:50%"></div>
                         </div>
                     </div>
-                    <div id="right">
+                    <aside>
                         <div>
                             <div id="triangle"></div>
                             <div id="house">
                                 <div id="up">
+                                    <div class="room locked" title="Salle de bain"></div>
                                     <div class="room locked" title="Chambre"></div>
                                     <div class="room locked" title="Bureau"></div>
-                                    <div class="room locked" title="Salle de bain"></div>
                                 </div>
                                 <div id="down">
                                     <div class="room active" title="Salon"></div>
-                                    <div class="room" title="Cuisine"></div>
-                                    <div class="room locked" title="Salle à manger"></div>
+                                    <div class="room" title="Salle à manger"></div>
+                                    <div class="room locked" title="Cuisine"></div>
                                 </div>
                             </div>
                         </div>
                         <div id="money">
-                            <img src="img/user.svg" alt="Argent">
+                            <img src="img/coin.png" alt="Pièce">
                             120
                         </div>
-                    </div>
-                </div>
+                    </aside>
+                </section>
                 <div id="nyanimal"></div>
-                <div id="actions">
+                <nav id="actions">
                     <div class="action" id="feed"></div>
                     <div class="action" id="treat"></div>
                     <div class="action" id="sleep"></div>
                     <div class="action" id="dress"></div>
-                    <div class="action" id="outside"></div>
-                </div>
+                    <a href="/outside"><div class="action" id="outside"></div></a>
+                </nav>
             </div>
-            <div id="appartment_view">
+            <section id="appartment_view">
                 <div id="appartment">
                     <div id="wall" style="background-color: #FBDA65"></div>
                     <div id="floor" style="background-color: #D1891C"></div>
                 </div>
-            </div>
+            </section>
         </main>
 
         <?php require "footer.php" ?>

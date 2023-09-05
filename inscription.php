@@ -10,7 +10,7 @@
                 $stmt->execute([$_POST["pseudo"], password_hash($_POST["password"], PASSWORD_DEFAULT), $_POST["mail"]]);
                 set_banner_message("Votre compte a bien été créé. Vous pouvez vous connecter.");
             } catch(PDOException $e) {
-                set_banner_message("Le pseudo ou l'email existent déjà, veuillez en choisir un autre.");
+                set_banner_message("Le pseudo ou l'email existe déjà, veuillez en choisir un autre.");
             }
         } else {
             set_banner_message("Une erreur s'est produite lors de l'inscription.");

@@ -1,3 +1,7 @@
+body {
+    height: 100vh;
+}
+
 #game {
     position: relative;
     align-items: start;
@@ -55,7 +59,7 @@
 }
 
 /*************House*************/
-#right {
+aside {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -74,7 +78,7 @@
 #house {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    background-color: burlywood;
+    background-color: #E4ABAB;
     width: 100px;
     height: 50px;
     padding: 5px;
@@ -98,17 +102,17 @@
 
 .room {
     pointer-events: auto;
-    background-color: blue;
+    background-color: #6688EF;
     width: 100%;
     cursor: pointer;
 }
 
 .active {
-    background-color: chartreuse;
+    background-color: #8BE000;
 }
 
 .locked {
-    background-color: lightslategray;
+    background-color: #000000AA;
 }
 
 #money {
@@ -116,7 +120,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    padding: 5px 15px;
+    padding: 5px 10px;
     background-color: #00000080;
     color: var(--light_text);
     border-radius: var(--radius);
@@ -181,7 +185,7 @@
 }
 
 #outside {
-    background-image: url("/img/user.svg");
+    background-image: url("/img/coin.png");
 }
 
 /*************************************APPARTMENT******************/
