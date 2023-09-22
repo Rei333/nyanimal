@@ -113,6 +113,7 @@ aside {
 
 .locked {
     background-color: #000000AA;
+    cursor: initial;
 }
 
 #money {
@@ -136,14 +137,11 @@ aside {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* transform-origin: center; */
-    background-image: url("/img/nyanimal.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     aspect-ratio: 1/1;
     height: 50%;
-
 }
 
 /******Actions*******/

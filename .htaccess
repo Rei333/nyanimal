@@ -7,3 +7,6 @@ RewriteRule ^contact$ contact.php
 RewriteRule ^cgu$ cgu.php
 RewriteRule ^legal$ legal.php
 RewriteRule ^faq$ faq.php
+RewriteRule ^furnitures_shop$ furnitures_shop.php
+
+RewriteRule ^test$ test.php

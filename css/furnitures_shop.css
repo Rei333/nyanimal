@@ -1,0 +1,52 @@
+#game {
+    display: flex;
+    flex-direction: row;
+}
+
+#furniture_selected, #products {
+    height: 75vh; /* PB ICI */
+    width: 100%;
+}
+
+#furniture_selected {
+    background-image: url("../favicon.ico");
+    background-size: cover;
+}
+
+#products {
+    background-color: var(--background);
+    padding: 10px 5px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    border-radius: var(--radius);
+}
+
+.img {
+    background-image: url("../favicon.ico");
+    background-size: cover;
+    height: 100%;
+}
+
+.tag {
+    display: flex;
+    background-color: #000000BF;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    color: var(--light_text);
+}
+
+.tag > div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.tag img {
+    width: 25px;
+}

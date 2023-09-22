@@ -4,6 +4,7 @@
     --section: #3B4595;
     --button: #859FED;
     --danger: #EA2929;
+    --background: #FBDA65;
 
     --desktop: normal 1rem/1 "Inter";
     --desktop_small: normal 0.75rem/1 "Inter";
@@ -75,6 +76,10 @@ header img {
 #logo {
     grid-column: 2;
     justify-self: center;
+}
+
+#logo > img {
+    height: 75px;
 }
 
 header > div {
