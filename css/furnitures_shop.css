@@ -1,21 +1,76 @@
 #game {
     display: flex;
     flex-direction: row;
+    align-items: stretch;
+    overflow: hidden;
 }
 
 #furniture_selected, #products {
-    height: 75vh; /* PB ICI */
-    width: 100%;
+    flex: 1;
 }
 
 #furniture_selected {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-image: url("../favicon.ico");
     background-size: cover;
+    padding: 10px;
+    gap: 15px;
+}
+
+#furniture_selected > a {
+    text-decoration: none;
+}
+
+#selected_product {
+    display: none;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    flex: 1;
+}
+
+#selected_product > img {
+    height: 60%;
+}
+
+
+#button {
+    display: none;
+    justify-content: center;
 }
 
 #products {
+    display: flex;
+    flex-direction: column;
     background-color: var(--background);
     padding: 10px 5px;
+}
+
+form, form > div {
+    display: flex;
+    gap: 10px;
+}
+
+form {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+form > div {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#shop {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-items: center;
+    padding: 10px;
+    gap: 15px;
+    overflow:scroll;
 }
 
 article {
@@ -24,6 +79,7 @@ article {
     width: 200px;
     height: 200px;
     border-radius: var(--radius);
+    overflow: clip;
 }
 
 .img {

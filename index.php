@@ -84,7 +84,10 @@
             </div>
             <section id="appartment_view">
                 <div id="appartment">
-                    <div id="wall" style="background-color: #FBDA65"></div>
+                    <div id="wall" style="background-color: #FBDA65">
+                        <img id="table" class="furnitures" src="/img/bdd/furnitures/table_granit_rouge.png">
+                        <img id="sofa" class="furnitures" src="/img/bdd/furnitures/table_granit_rouge.png">
+                    </div>
                     <div id="floor" style="background-color: #D1891C"></div>
                 </div>
             </section>

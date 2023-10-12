@@ -1,7 +1,3 @@
-body {
-    height: 100vh;
-}
-
 #game {
     position: relative;
     align-items: start;
@@ -196,7 +192,7 @@ aside {
 #appartment {
     display: grid;
     grid-template-rows: 2fr 1fr;
-    width: 2000px;
+    width: 4000px;
     height: 100%;
 }
 
@@ -217,4 +213,22 @@ aside {
 
 #floor {
     grid-row: 2;
+}
+
+.furnitures {
+    position: absolute;
+    bottom: -5%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#table {
+    left: 60px;
+    height: 40%;
+}
+
+#sofa {
+    left: 800px;
+    height: 40%;
 }

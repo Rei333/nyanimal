@@ -1,3 +1,7 @@
+body {
+    height: initial;
+}
+
 main {
     gap: 20px;
 }
