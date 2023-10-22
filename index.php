@@ -12,6 +12,10 @@
         header("Location: /logout");
         exit;
     }
+
+    $stmt = $db->prepare("SELECT category, variation, image FROM users_furnitures INNER JOIN furnitures ON users_furnitures.furniture_id = furnitures.id WHERE user_id=?");
+    $stmt->execute(array($_SESSION["id"]));
+    $furnitures = $stmt->fetchAll();
 ?>
 
 <html lang="fr">
@@ -85,8 +89,16 @@
             <section id="appartment_view">
                 <div id="appartment">
                     <div id="wall" style="background-color: #FBDA65">
-                        <img id="table" class="furnitures" src="/img/bdd/furnitures/table_granit_rouge.png">
-                        <img id="sofa" class="furnitures" src="/img/bdd/furnitures/table_granit_rouge.png">
+                        <?php for ($i=0; $i<sizeof($furnitures); $i++) {
+                            if($furnitures[$i]["category"]=="Table") { ?>
+                            <img class="furnitures" id="table" src="<?= $furnitures[$i]["image"] ?>" alt="<?= $furnitures[$i]["category"] ?> <?= $furnitures[$i]["variation"] ?>">
+                        <?php }
+                        } ?>
+                        <?php for ($i=0; $i<sizeof($furnitures); $i++) {
+                            if($furnitures[$i]["category"]=="Canapé") { ?>
+                            <img class="furnitures" id="sofa" src="<?= $furnitures[$i]["image"] ?>" alt="<?= $furnitures[$i]["category"] ?> <?= $furnitures[$i]["variation"] ?>">
+                        <?php }
+                        } ?>
                     </div>
                     <div id="floor" style="background-color: #D1891C"></div>
                 </div>

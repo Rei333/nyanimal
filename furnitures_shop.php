@@ -3,6 +3,56 @@
 <?php
     require "config.php";
     check_connected();
+
+    $stmt = $db->prepare("SELECT * FROM nyanimal.furnitures");
+    $stmt->execute();
+    $furniture = $stmt->fetch();
+
+    $req = $db->prepare("SELECT money FROM nyanimal.users WHERE id=?");
+    $req->execute(array($_SESSION["id"]));
+    $user = $req->fetch();
+
+    if(isset($_POST["id_furniture"])) {
+        $request = $db->prepare("SELECT * FROM nyanimal.furnitures WHERE id=?");
+        $request->execute(array($_POST["id_furniture"]));
+        $product = $request->fetch();
+
+        if($user["money"] > $product["price"]) {
+            $verification = $db->prepare("SELECT users_furnitures.id, category, variation FROM users_furnitures INNER JOIN furnitures ON users_furnitures.furniture_id = furnitures.id WHERE user_id=? AND category=?");
+            $verification->execute(array($_SESSION["id"], $product["category"]));
+            $user_furniture = $verification->fetch();
+
+            //Check if the user already have a furniture with the same category
+            if($user_furniture) {
+                //Check if the new furniture is the current furniture
+                if($user_furniture["category"] && $user_furniture["variation"] == $product["variation"] && $product["variation"]) {
+                    set_banner_message("Tu possèdes déjà ce meuble.");
+                } else {
+                    //Buy the new furniture
+                    $spend=$db->prepare("UPDATE users SET money = money - ? WHERE id= ?");
+                    $spend->execute(array($product["price"], $_SESSION["id"]));
+
+                    //Replace old furniture id with the new id
+                    $new=$db->prepare("UPDATE users_furnitures SET furniture_id = ? WHERE id=?");
+                    $new->execute(array($_POST["id_furniture"], $user_furniture["id"]));
+
+                    set_banner_message("Le meuble à bien été acheté !");
+                }
+            } else {
+                //Buy the new furniture
+                $spend=$db->prepare("UPDATE users SET money = money - ? WHERE id= ?");
+                $spend->execute(array($product["price"], $_SESSION["id"]));
+
+                //Insert the new furniture
+                $new=$db->prepare("INSERT INTO users_furnitures (user_id, furniture_id) VALUES (?, ?);");
+                $new->execute(array($_SESSION["id"], $_POST["id_furniture"]));
+
+                set_banner_message("Le meuble à bien été acheté !");
+            }
+        } else {
+            set_banner_message("Tu n'as pas assez d'argent pour acheter ce meuble.");
+        }
+    }
 ?>
 
 <html lang="fr">
@@ -21,11 +71,12 @@
             <section id="furniture_selected">
                 <a href="/outside"><button class="danger">Revenir en arrière</button></a>
                 <div id="selected_product">
-                    <img src="/img/bdd/furnitures/table_granit_rouge.png" alt="">
+                    <img src="">
                 </div>
-                <div id="button">
-                    <button>Acheter</button>
-                </div>
+                <form method="POST" id="button">
+                    <input type="hidden" name="id_furniture" value="">
+                    <button onclick="return confirm('Veux-tu vraiment acheter ce meuble ?')">Acheter</button>
+                </form>
             </section>
 
             <section id="products">
@@ -65,17 +116,19 @@
                 </form>
 
                 <div id="shop">
-                    <?php for($i=0; $i<10; $i++) { ?>
-                        <article onclick="selected_article(<?= $i ?>)">
-                            <div class="img"></div>
+                    <?php while($furniture) { ?>
+                        <article id="product_<?= $furniture['id'] ?>" onclick="selected_article(<?= $furniture['id'] ?>, `<?= $furniture['image'] ?>`)">
+                            <img class="product_img" src="<?= $furniture['image'] ?>">
                             <div class="tag">
-                                <span>Table en granit rouge</span>
-                                <div>120
+                                <span><?= $furniture["category"] . " " . $furniture["variation"] ?></span>
+                                <div><?= $furniture["price"] ?>
                                     <img src="/img/coin.png" alt="pièces">
                                 </div>
                             </div>
                         </article>
-                    <?php } ?>
+                        <?php $furniture = $stmt->fetch();
+                        $i++;
+                    } ?>
                 </div>
             </section>
         </main>
