@@ -72,11 +72,12 @@
                 <a href="/outside"><button class="danger">Revenir en arrière</button></a>
                 <div id="selected_product">
                     <img src="">
+                    <form method="POST" id="button">
+                        <input type="hidden" name="id_furniture">
+                        <button onclick="return confirm('Veux-tu vraiment acheter ce meuble ?')">Acheter</button>
+                    </form>
                 </div>
-                <form method="POST" id="button">
-                    <input type="hidden" name="id_furniture" value="">
-                    <button onclick="return confirm('Veux-tu vraiment acheter ce meuble ?')">Acheter</button>
-                </form>
+
             </section>
 
             <section id="products">
@@ -112,7 +113,7 @@
                         </div>
                     </div>
 
-                    <input type="submit" value="Appliquer">
+                    <input type="submit" value="Filtrer">
                 </form>
 
                 <div id="shop">

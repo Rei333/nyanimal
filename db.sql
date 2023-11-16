@@ -5,7 +5,8 @@ CREATE TABLE users (
     pseudo VARCHAR(255) UNIQUE NOT NULL,
     password VARCHAR(255) NOT NULL,
     mail VARCHAR(255) UNIQUE NOT NULL,
-    money INT NOT NULL DEFAULT 500,
+    money INT NOT NULL DEFAULT 1000,
+    admin BOOL NOT NULL DEFAULT FALSE
 
     -- NYANIMAL
     energy INT NOT NULL DEFAULT 100,
@@ -73,6 +74,4 @@ CREATE TABLE users_foods (
 
 INSERT INTO users (pseudo, password, mail) VALUES ("test", "$2y$10$xmbmoDaIkOxEo27KZR.ike5x2MqeNtV2HOOsUppsxvj2ya3jVCBBS", "test@gmail.com");
 
-INSERT INTO furnitures (category, variation, price, image) VALUES ("Table", "en granit rouge", 120, "/img/bdd/furnitures/table_granit_rouge.png"), ("Table", "en granit bleu", 120, "/img/bdd/furnitures/table_granit_bleu.png"), ("Table", "en granit violet", 120, "/img/bdd/furnitures/table_granit_violet.png"), ("Canapé", "en tissus bleu", 500, "/img/bdd/furnitures/lit_opale_gris.png");
-
-INSERT INTO users_furnitures (user_id, furniture_id) VALUES (1, 1);
+INSERT INTO furnitures (category, variation, price, image) VALUES ("Bureau", "en bois bleu", 500, "/img/bdd/furnitures/bureau_bois_bleu.png"), ("Bureau", "en bois violet", 500, "/img/bdd/furnitures/bureau_bois_violet.png"), ("Commode", "en bois bleu", 120, "/img/bdd/furnitures/commode_bois_bleu.png"), ("Commode", "en bois brun", 120, "/img/bdd/furnitures/commode_bois_brun.png"), ("Commode", "en bois jaune", 120, "/img/bdd/furnitures/commode_bois_jaune.png");

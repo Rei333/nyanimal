@@ -3,4 +3,5 @@
 
     unset($_SESSION["id"]);
     header("Location: /connexion");
+    exit;
 ?>

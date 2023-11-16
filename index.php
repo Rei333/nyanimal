@@ -70,10 +70,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="money">
-                            <img src="img/coin.png" alt="Pièce">
-                            <?= $user["money"] ?>
-                        </div>
                     </aside>
                 </section>
                 <div id="nyanimal" style="background-image: url('/img/bdd/clothes/pants.png'), url('/img/bdd/clothes/truc.png'), url('/img/nyanimal.png');">
@@ -90,13 +86,13 @@
                 <div id="appartment">
                     <div id="wall" style="background-color: #FBDA65">
                         <?php for ($i=0; $i<sizeof($furnitures); $i++) {
-                            if($furnitures[$i]["category"]=="Table") { ?>
-                            <img class="furnitures" id="table" src="<?= $furnitures[$i]["image"] ?>" alt="<?= $furnitures[$i]["category"] ?> <?= $furnitures[$i]["variation"] ?>">
+                            if($furnitures[$i]["category"]=="Bureau") { ?>
+                            <img class="furnitures" id="bureau" src="<?= $furnitures[$i]["image"] ?>" alt="<?= $furnitures[$i]["category"] ?> <?= $furnitures[$i]["variation"] ?>">
                         <?php }
                         } ?>
                         <?php for ($i=0; $i<sizeof($furnitures); $i++) {
-                            if($furnitures[$i]["category"]=="Canapé") { ?>
-                            <img class="furnitures" id="sofa" src="<?= $furnitures[$i]["image"] ?>" alt="<?= $furnitures[$i]["category"] ?> <?= $furnitures[$i]["variation"] ?>">
+                            if($furnitures[$i]["category"]=="Commode") { ?>
+                            <img class="furnitures" id="commode" src="<?= $furnitures[$i]["image"] ?>" alt="<?= $furnitures[$i]["category"] ?> <?= $furnitures[$i]["variation"] ?>">
                         <?php }
                         } ?>
                     </div>

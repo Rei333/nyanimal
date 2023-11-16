@@ -112,21 +112,6 @@ aside {
     cursor: initial;
 }
 
-#money {
-    align-self: flex-end;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 5px 10px;
-    background-color: #00000080;
-    color: var(--light_text);
-    border-radius: var(--radius);
-}
-
-#money img {
-    height: 20px;
-}
-
 /*******Nyanimal**********/
 #nyanimal {
     position: absolute;
@@ -217,18 +202,18 @@ aside {
 
 .furnitures {
     position: absolute;
-    bottom: -5%;
+    bottom: -10%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-#table {
+#bureau {
     left: 60px;
-    height: 40%;
+    height: 80%;
 }
 
-#sofa {
+#commode {
     left: 800px;
-    height: 40%;
+    height: 60%;
 }

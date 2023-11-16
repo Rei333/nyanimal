@@ -1,9 +1,19 @@
-<?php banner(); ?>
+<?php
+    $req = $db->prepare("SELECT * FROM nyanimal.users WHERE id=?");
+    $req->execute(array($_SESSION["id"]));
+    $user = $req->fetch();
+
+    banner();
+?>
 
 <header>
     <?php if (isset($_SESSION["id"])) { ?>
         <a id="logo" href="/"><img src="img/logo.svg" alt="logo" title="Jeu"></a>
         <div>
+            <div id="money">
+                <img src="img/coin.png" alt="Pièce">
+                <?= $user["money"] ?>
+            </div>
             <a id="account" href="/account"><img src="img/user.svg" alt="compte" title="Mon Compte"></a>
             <button class="danger" id="logout">
                 <a href="/logout">
