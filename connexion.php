@@ -46,25 +46,31 @@
             <section id="presentation">
                 <h2>Découvrez Nyanimal en quelques images :</h2>
                 <div>
-                    <img class="left" src="img/connexion1.png" alt="Exemple maison">
-                    <div class="right">
-                        <h2>Prends soin de ton Nyanimal</h2>
-                        Joue avec lui, habille-le, gagne de l'argent et décore ta maison ! 
-                        N'oublie pas de lui donner à manger et de le coucher !
-                    </div>
+                    <article>
+                        <img src="img/connexion1.png" alt="Exemple maison">
+                        <div class="text">
+                            <h2>Prends soin de ton Nyanimal !</h2>
+                            Joue avec lui, habille-le, gagne de l'argent et décore ta maison ! 
+                            N'oublie pas de lui donner à manger et de le coucher !
+                        </div>
+                    </article>
 
-                    <div class="left">
-                        <h2>Fais les boutiques !</h2>
-                        Besoin de nourriture, meubles ou habits ? Fais un tour dans la ville pour accéder aux boutiques !
-                    </div>
-                    <img class="right" src="img/connexion2.png" alt="Ville">
+                    <article>
+                        <div class="text">
+                            <h2>Fais les boutiques !</h2>
+                            Besoin de nourriture, meubles ou habits ? Fais un tour dans la ville pour accéder aux boutiques !
+                        </div>
+                        <img src="img/connexion2.png" alt="Ville">
+                    </article>
 
-                    <img class="left" src="img/connexion3.png" alt="Exemple boutique">
-                    <div class="right">
-                        <h2>Décore ta maison !</h2>
-                        Achète des meubles pour décorer les pièces de ta maison ! 
-                        Chaque modèle possède plusieurs coloris ! 
-                    </div>
+                    <article>
+                        <img src="img/connexion3.png" alt="Exemple boutique">
+                        <div class="text">
+                            <h2>Décore ta maison !</h2>
+                            Achète des meubles pour décorer les pièces de ta maison ! 
+                            Chaque modèle possède plusieurs coloris ! 
+                        </div>
+                    </article>
                     <div>
                         <h3>Prêt(e) pour l'aventure ?</h3>
                         <div id="buttons">
@@ -74,6 +80,7 @@
                     </div>
                 </div>
             </section>
+
         </main>
 
         <?php require "footer.php"; ?>

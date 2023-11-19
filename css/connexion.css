@@ -35,14 +35,13 @@ h2:first-child {
     margin-bottom: 20px;
 }
 
-#presentation > div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+#presentation article {
+    display: flex;
     align-items: center;
-    justify-items: center;
+    margin: 20px 0;
 }
 
-#presentation > div > div {
+.text {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -50,22 +49,14 @@ h2:first-child {
     padding: 10px;
 }
 
-.left {
-    grid-column: 1;
-}
-
-.right {
-    grid-column: 2;
-}
-
-img.left, img.right {
+article img {
     border-radius: var(--radius);
 }
 
 #presentation > div > div:last-child {
-    grid-column: 1 /span 2;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
     margin-top: 20px;
 }
@@ -73,5 +64,45 @@ img.left, img.right {
 #buttons {
     display: flex;
     justify-content: center;
+    margin: 20px 0;
     gap: 15px;
+}
+
+@media only screen and (max-width: 900px) {
+    #presentation {
+        width: 100%;
+    }
+
+    #presentation > div {
+        display: flex;
+        flex-direction: column;
+        align-items: unset;
+    }
+
+    #presentation article {
+        flex-direction: column;
+    }
+
+    #presentation article:nth-child(2) {
+        flex-direction: column-reverse;
+    }
+
+    article img {
+        width: 75%;
+    }
+
+    #buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    article img {
+        width: 100%;
+    }
+
+    .text {
+        text-align: left;
+    }
 }

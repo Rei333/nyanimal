@@ -9,9 +9,9 @@
     --desktop: normal 1rem/1 "Inter";
     --desktop_small: normal 0.75rem/1 "Inter";
     --desktop_title: bold 1.5rem/1 "Inter";
-    --phone: normal 0.75rem/1 "Inter";
-    --phone_small: normal 0.5rem/1 "Inter";
-    --phone_title: normal 1rem/1 "Inter";
+    --phone: normal 1rem/1 "Inter";
+    --phone_small: normal 0.75rem/1 "Inter";
+    --phone_title: bold 1.2rem/1 "Inter";
     font: var(--desktop);
 
     --border: solid #D1D2DD 3px;
@@ -36,6 +36,12 @@ body {
     background-image: linear-gradient(45deg, #7387c6, #E32DF395);
     height: 100vh;
     margin: 0;
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        font: var(--phone);
+    }
 }
 
 /***************************************** Banner ****************************************/
@@ -162,6 +168,12 @@ h1, h2, h3 {
     font: var(--desktop_title);
 }
 
+@media only screen and (max-width: 900px) {
+    h1, h2, h3 {
+        font: var(--phone_title);
+    }
+}
+
 input:not([type="submit"]) {
     border-radius: var(--radius);
     padding: 0 5px;
@@ -225,4 +237,10 @@ footer {
 
 footer > span {
     color: var(--light_text);
+}
+
+@media only screen and (max-width: 900px) {
+    footer > span {
+        font: var(--phone_small);
+    }
 }
