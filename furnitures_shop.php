@@ -119,7 +119,7 @@
                 <div id="shop">
                     <?php while($furniture) { ?>
                         <article id="product_<?= $furniture['id'] ?>" onclick="selected_article(<?= $furniture['id'] ?>, `<?= $furniture['image'] ?>`)">
-                            <img class="product_img" src="<?= $furniture['image'] ?>">
+                            <img class="product_img" src="<?= $furniture['image'] ?>" alt="<?= $furniture["category"] . " " . $furniture["variation"] ?>">
                             <div class="tag">
                                 <span><?= $furniture["category"] . " " . $furniture["variation"] ?></span>
                                 <div><?= $furniture["price"] ?>
