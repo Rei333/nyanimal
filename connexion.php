@@ -46,24 +46,24 @@
             <section id="presentation">
                 <h2>Découvrez Nyanimal en quelques images :</h2>
                 <div>
-                    <img class="left" src="img/logo.png" alt="img1">
+                    <img class="left" src="img/connexion1.png" alt="Exemple maison">
                     <div class="right">
                         <h2>Prends soin de ton Nyanimal</h2>
-                        Joue avec lui, veille sur lui, gagne de l'argent et décore ta maison !
-                        Plus ton Nyanimal est heureux, plus tu gagnes d'argent, plus tu pourras décorer ta maison !
+                        Joue avec lui, habille-le, gagne de l'argent et décore ta maison ! 
+                        N'oublie pas de lui donner à manger et de le coucher !
                     </div>
 
                     <div class="left">
-                        <h2>Habille ton Nyanimal</h2>
-                        Achète à la boutique des habits pour pouvoir personnaliser ton Nyanimal !
-                        Texte texte texte texte
+                        <h2>Fais les boutiques !</h2>
+                        Besoin de nourriture, meubles ou habits ? Fais un tour dans la ville pour accéder aux boutiques !
                     </div>
-                    <img class="right" src="img/logo.png" alt="img1">
+                    <img class="right" src="img/connexion2.png" alt="Ville">
 
-                    <img class="left" src="img/logo.png" alt="img1">
+                    <img class="left" src="img/connexion3.png" alt="Exemple boutique">
                     <div class="right">
-                        <h2>Joue avec ton Nyanimal</h2>
-                        Texte texte texte texte texte texte texte texte texte texte texte texte texte texte
+                        <h2>Décore ta maison !</h2>
+                        Achète des meubles pour décorer les pièces de ta maison ! 
+                        Chaque modèle possède plusieurs coloris ! 
                     </div>
                     <div>
                         <h3>Prêt(e) pour l'aventure ?</h3>

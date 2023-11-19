@@ -61,7 +61,7 @@
         <title>Boutique de Meuble</title>
         <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/furnitures_shop.css">
-        <script src="furnitures_shop.js" defer></script>
+        <script src="js/furnitures_shop.js" defer></script>
     </head>
 
     <body>

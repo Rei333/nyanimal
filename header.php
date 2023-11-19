@@ -1,7 +1,9 @@
 <?php
-    $req = $db->prepare("SELECT * FROM nyanimal.users WHERE id=?");
-    $req->execute(array($_SESSION["id"]));
-    $user = $req->fetch();
+    if (isset($_SESSION["id"])) {
+        $req = $db->prepare("SELECT * FROM nyanimal.users WHERE id=?");
+        $req->execute(array($_SESSION["id"]));
+        $user = $req->fetch();
+    }
 
     banner();
 ?>
