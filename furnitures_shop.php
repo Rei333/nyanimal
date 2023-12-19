@@ -17,7 +17,7 @@
         $request->execute(array($_POST["id_furniture"]));
         $product = $request->fetch();
 
-        if($user["money"] > $product["price"]) {
+        if($user["money"] >= $product["price"]) {
             $verification = $db->prepare("SELECT users_furnitures.id, category, variation FROM users_furnitures INNER JOIN furnitures ON users_furnitures.furniture_id = furnitures.id WHERE user_id=? AND category=?");
             $verification->execute(array($_SESSION["id"], $product["category"]));
             $user_furniture = $verification->fetch();
@@ -130,6 +130,17 @@
                         <?php $furniture = $stmt->fetch();
                         $i++;
                     } ?>
+
+                    <div id="tel_selected_product">
+                        <img src="">
+                        <form method="POST" id="tel_button">
+                            <input type="hidden" name="id_furniture">
+                            <div>
+                                <button onclick="return confirm('Veux-tu vraiment acheter ce meuble ?')">Acheter</button>
+                                <button onclick="close_popup(); return false" class="danger">Annuler</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </section>
         </main>
