@@ -130,17 +130,17 @@
                         <?php $furniture = $stmt->fetch();
                         $i++;
                     } ?>
+                </div>
 
-                    <div id="tel_selected_product">
-                        <img src="">
-                        <form method="POST" id="tel_button">
-                            <input type="hidden" name="id_furniture">
-                            <div>
-                                <button onclick="return confirm('Veux-tu vraiment acheter ce meuble ?')">Acheter</button>
-                                <button onclick="close_popup(); return false" class="danger">Annuler</button>
-                            </div>
-                        </form>
-                    </div>
+                <div id="tel_selected_product">
+                    <img src="">
+                    <form method="POST" id="tel_button">
+                        <input type="hidden" name="id_furniture">
+                        <div>
+                            <button onclick="return confirm('Veux-tu vraiment acheter ce meuble ?')">Acheter</button>
+                            <button onclick="close_popup(); return false" class="danger">Annuler</button>
+                        </div>
+                    </form>
                 </div>
             </section>
         </main>
