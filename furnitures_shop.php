@@ -61,6 +61,7 @@
         <title>Boutique de Meuble</title>
         <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/furnitures_shop.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="js/furnitures_shop.js" defer></script>
     </head>
 

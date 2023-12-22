@@ -24,6 +24,7 @@
         <title>Connexion</title>
         <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/connexion.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
@@ -50,7 +51,7 @@
                         <img src="img/connexion1.png" alt="Exemple maison">
                         <div class="text">
                             <h2>Prends soin de ton Nyanimal !</h2>
-                            Joue avec lui, habille-le, gagne de l'argent et décore ta maison ! 
+                            Joue avec lui, habille-le, gagne de l'argent et décore ta maison !
                             N'oublie pas de lui donner à manger et de le coucher !
                         </div>
                     </article>
@@ -67,8 +68,8 @@
                         <img src="img/connexion3.png" alt="Exemple boutique">
                         <div class="text">
                             <h2>Décore ta maison !</h2>
-                            Achète des meubles pour décorer les pièces de ta maison ! 
-                            Chaque modèle possède plusieurs coloris ! 
+                            Achète des meubles pour décorer les pièces de ta maison !
+                            Chaque modèle possède plusieurs coloris !
                         </div>
                     </article>
                     <div>

@@ -24,6 +24,7 @@
         <title>Jeu</title>
         <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
@@ -36,22 +37,22 @@
                         <div>Energie :</div>
                         <div class="gauge">
                             <div><?= $user["energy"] ?>%</div>
-                            <div style="width:<?= $user["energy"] ?>%"></div>
+                            <div class="filled_color" style="width:<?= $user["energy"] ?>%"></div>
                         </div>
                         <div>Satiété :</div>
                         <div class="gauge">
                             <div><?= $user["satiety"] ?>%</div>
-                            <div style="width:<?= $user["satiety"] ?>%"></div>
+                            <div class="filled_color" style="width:<?= $user["satiety"] ?>%"></div>
                         </div>
                         <div>Bonheur :</div>
                         <div class="gauge">
                             <div><?= $user["hapiness"] ?>%</div>
-                            <div style="width:<?= $user["hapiness"] ?>%"></div>
+                            <div class="filled_color" style="width:<?= $user["hapiness"] ?>%"></div>
                         </div>
                         <div>Santé :</div>
                         <div class="gauge">
                             <div><?= $user["health"] ?>%</div>
-                            <div style="width:<?= $user["health"] ?>%"></div>
+                            <div class="filled_color" style="width:<?= $user["health"] ?>%"></div>
                         </div>
                     </div>
                     <aside>

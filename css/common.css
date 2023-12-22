@@ -46,21 +46,23 @@ body {
 
 /***************************************** Banner ****************************************/
 #banner {
+    position: absolute;
+    box-sizing: border-box;
     background-color: lightgrey;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    z-index: 1;
+    width: 100%;
     padding: 10px;
+    gap: 10px;
 }
 
 #banner div {
-    grid-column: 2;
     align-self: center;
     text-align: center;
-    white-space: pre;
+    white-space: break-spaces;
 }
 
 #banner img {
-    grid-column: 3;
     justify-self: end;
     align-self: center;
     height: 20px;
@@ -134,6 +136,26 @@ header > div {
 #logout img {
     transform: rotate(90deg);
 }
+
+@media only screen and (max-width: 500px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    header > div {
+        gap: 10px;
+    }
+
+    #account img {
+        height: 35px;
+    }
+
+    #logout {
+        width: 20px;
+        height: 20px;
+    }
+}
+
 /****************************************** Main ***************************************/
 main {
     flex: 1;
