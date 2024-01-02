@@ -23,7 +23,6 @@ form > div:nth-child(2) {
     gap: 5px;
 }
 
-
 form > div:first-child, form > div:last-child {
     flex-direction: column;
     gap: 10px;
@@ -31,4 +30,12 @@ form > div:first-child, form > div:last-child {
 
 #delete {
     margin-top: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+    form > div > div, form > div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
 }

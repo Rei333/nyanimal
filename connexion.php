@@ -1,21 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-    require "config.php";
-
-    if(isset($_POST["pseudo"]) && isset($_POST["password"])) {
-        $stmt = $db->prepare("SELECT * FROM users WHERE pseudo = ?");
-        $stmt->execute([$_POST["pseudo"]]);
-        $user = $stmt->fetch();
-
-        if($user && password_verify($_POST["password"], $user["password"])) {
-            $_SESSION["id"] = $user["id"];
-            header("Location: /");
-            exit;
-        } else {
-            set_banner_message("Pseudo ou mot de passe incorrect.");
-        }
-    }
+    require "controller/controller_connexion.php";
 ?>
 
 <html lang="fr">

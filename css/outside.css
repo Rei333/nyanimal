@@ -39,3 +39,26 @@
     background-color: green;
     height: 100%;
 }
+
+@media only screen and (max-width: 600px) {
+    #sky {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px ;
+    }
+
+    .batiment {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .batiment > div {
+        display: flex;
+        justify-content: center;
+        transform: rotate(-90deg);
+        white-space: nowrap;
+        width: 100%;
+    }
+}

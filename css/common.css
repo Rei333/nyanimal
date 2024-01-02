@@ -60,6 +60,7 @@ body {
     align-self: center;
     text-align: center;
     white-space: break-spaces;
+    width: 100%;
 }
 
 #banner img {
@@ -191,6 +192,11 @@ h1, h2, h3 {
 }
 
 @media only screen and (max-width: 900px) {
+    .important_section {
+        width: 95%;
+        padding: 10px 10px;
+    }
+
     h1, h2, h3 {
         font: var(--phone_title);
     }

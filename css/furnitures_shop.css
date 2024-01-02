@@ -29,7 +29,16 @@
     display: none;
 }
 
+#tel_exit_button {
+    margin-bottom: 20px;
+}
+
 @media only screen and (min-width: 800px) {
+    #tel_exit_button {
+        display: none;
+        margin-bottom: 20px;
+    }
+
     #tel_selected_product > img, #tel_selected_product form > div, #tel_button, #tel_button > button {
         display: none;
     }
@@ -38,6 +47,11 @@
 @media only screen and (max-width: 800px) {
     #furniture_selected {
         display: none ;
+    }
+
+    #filter_form {
+        flex-direction: column;
+        align-items: center;
     }
 
     #tel_selected_product {

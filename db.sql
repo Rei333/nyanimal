@@ -5,7 +5,7 @@ CREATE TABLE users (
     pseudo VARCHAR(255) UNIQUE NOT NULL,
     password VARCHAR(255) NOT NULL,
     mail VARCHAR(255) UNIQUE NOT NULL,
-    money INT NOT NULL DEFAULT 1000,
+    money INT NOT NULL DEFAULT 1500,
     admin BOOLEAN NOT NULL DEFAULT FALSE,
 
     -- NYANIMAL
@@ -47,29 +47,29 @@ CREATE TABLE food (
 );
 
 CREATE TABLE users_furnitures (
-    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     user_id INT NOT NULL,
     furniture_id INT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
-    FOREIGN KEY (furniture_id) REFERENCES furnitures(id) ON DELETE CASCADE
+    FOREIGN KEY (furniture_id) REFERENCES furnitures(id) ON DELETE CASCADE,
+    PRIMARY KEY (user_id, furniture_id)
 );
 
 CREATE TABLE users_clothes (
-    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     user_id INT NOT NULL,
     clothe_id INT NOT NULL,
     is_wear BOOL NOT NULL DEFAULT FALSE,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
-    FOREIGN KEY (clothe_id) REFERENCES clothes(id) ON DELETE CASCADE
+    FOREIGN KEY (clothe_id) REFERENCES clothes(id) ON DELETE CASCADE,
+    PRIMARY KEY (user_id, clothe_id)
 );
 
 CREATE TABLE users_foods (
-    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     user_id INT NOT NULL,
     food_id INT NOT NULL,
     quantity INT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
-    FOREIGN KEY (food_id) REFERENCES food(id) ON DELETE CASCADE
+    FOREIGN KEY (food_id) REFERENCES food(id) ON DELETE CASCADE,
+    PRIMARY KEY (user_id, food_id)
 );
 
 INSERT INTO users (pseudo, password, mail) VALUES ("test", "$2y$10$xmbmoDaIkOxEo27KZR.ike5x2MqeNtV2HOOsUppsxvj2ya3jVCBBS", "test@gmail.com");

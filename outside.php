@@ -8,7 +8,7 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>Jeu</title>
+        <title>Nyaniville</title>
         <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/outside.css">
     </head>

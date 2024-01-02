@@ -1,21 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-    require "config.php";
-    check_connected();
-
-    $req = $db->prepare("SELECT * FROM nyanimal.users WHERE id=?");
-    $req->execute(array($_SESSION["id"]));
-    $user = $req->fetch();
-
-    if(!$user) {
-        header("Location: /logout");
-        exit;
-    }
-
-    $stmt = $db->prepare("SELECT category, variation, image FROM users_furnitures INNER JOIN furnitures ON users_furnitures.furniture_id = furnitures.id WHERE user_id=?");
-    $stmt->execute(array($_SESSION["id"]));
-    $furnitures = $stmt->fetchAll();
+    require "controller/controller_index.php";
 ?>
 
 <html lang="fr">
