@@ -4,7 +4,7 @@
     require "config.php";
 
     if(isset($_POST["pseudo"]) && isset($_POST["password"]) && isset($_POST["mail"]) && isset($_POST["cgu"])) {
-        if(strlen($_POST["pseudo"]) > 2 && strlen($_POST["password"]) > 6 && filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) > 6 && $_POST["cgu"] == "on") {
+        if(strlen($_POST["pseudo"]) > 2 && strlen($_POST["password"]) > 6 && filter_var($_POST["mail"], FILTER_VALIDATE_EMAIL) > 6 && $_POST["cgu"] == "on") {
             try {
                 $stmt = $db->prepare("INSERT INTO users (pseudo, password, mail) VALUES (?, ?, ?)");
                 $stmt->execute([$_POST["pseudo"], password_hash($_POST["password"], PASSWORD_DEFAULT), $_POST["mail"]]);
@@ -24,6 +24,7 @@
         <title>Inscription</title>
         <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/inscription.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
