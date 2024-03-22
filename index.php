@@ -1,17 +1,17 @@
 <?php
     require "config.php";
-    require "model/model_index.php";
+    require_once "model/model_user.php";
+    require_once "model/model_user_furniture.php";
     check_connected();
 
-    $player = new Player_house();
-    $user = $player->get_connected_user();
+    $user = User::get($_SESSION["id"]);
 
     if(!$user) {
         header("Location: /logout");
         exit;
     }
 
-    $furnitures = $player->get_furnitures_from_connected_user();
+    $furnitures = $user->get_furnitures();
 
     include "view/view_index.php";
 ?>

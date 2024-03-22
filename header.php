@@ -1,20 +1,22 @@
 <?php
+    require_once "model/model_user.php";
+
     if (isset($_SESSION["id"])) {
-        $req = $db->prepare("SELECT * FROM nyanimal.users WHERE id=?");
-        $req->execute(array($_SESSION["id"]));
-        $user = $req->fetch();
+        $user = User::get($_SESSION["id"]);
+    } else {
+        $user = false;
     }
 
     banner();
 ?>
 
 <header>
-    <?php if (isset($_SESSION["id"])) { ?>
+    <?php if ($user) { ?>
         <a id="logo" href="/"><img src="img/logo.svg" alt="logo" title="Jeu"></a>
         <div>
             <div id="money">
                 <img src="img/coin.png" alt="Pièce">
-                <?= $user["money"] ?>
+                <?= $user->money ?>
             </div>
             <a id="account" href="/account"><img src="img/user.svg" alt="compte" title="Mon Compte"></a>
             <button class="danger" id="logout">

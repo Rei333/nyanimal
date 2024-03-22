@@ -1,40 +1,42 @@
 <?php
     require "config.php";
-    require "model/model_furnitures_shop.php";
     check_connected();
+    require_once "model/model_user.php";
+    require_once "model/model_furniture.php";
+    require_once "model/model_user_furniture.php";
 
-    $furniture_object = new Furniture_shop();
-    $user_object = new User_furniture($_SESSION["id"]);
-    $furnitures = $furniture_object->get_all_furnitures();
-    $user = $user_object->get_user();
+    $furnitures = Furniture::get_all();
+    $user = User::get($_SESSION["id"]);
 
     if(isset($_POST["id_furniture"])) {
-        $product = $furniture_object->get_furniture($_POST["id_furniture"]);
+        $product = Furniture::get($_POST["id_furniture"]);
 
-        if($user["money"] >= $product["price"]) {
+        if($product && $user->money >= $product->price) {
             //Tries to get the user's furniture that has a given category
-            $user_furniture = $user_object->get_furniture_from_category($product["category"]);
+            $user_furniture = $user->get_furniture_from_category($product->category);
 
             //Check if the user already has a furniture with the same category
             if($user_furniture) {
+                $furniture = $user_furniture->get_furniture();
+
                 //Check if the new furniture is the current furniture
-                if($user_furniture["category"] && $user_furniture["variation"] == $product["variation"] && $product["variation"]) {
+                if($furniture->category == $product->category && $furniture->variation == $product->variation) {
                     set_banner_message("Tu possèdes déjà ce meuble.");
                 } else {
                     //Buy the new furniture
-                    $user_object->spend_money($product["price"]);
+                    $user->spend_money($product->price);
 
                     //Replace old furniture with the new furniture
-                    $user_object->update_user_furniture($_POST["id_furniture"], $user_furniture["furniture_id"]);
+                    $user_furniture->replace($product->id);
 
                     set_banner_message("Le meuble à bien été acheté !");
                 }
             } else {
                 //Buy the new furniture
-                $user_object->spend_money($product["price"]);
+                $user->spend_money($product->price);
 
                 //Insert the new furniture
-                $user_object->insert_new_user_furniture($_POST["id_furniture"]);
+                User_Furniture::create($user->id, $product->id);
 
                 set_banner_message("Le meuble à bien été acheté !");
             }

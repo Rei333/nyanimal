@@ -1,13 +1,12 @@
 <?php
     require "config.php";
-    require "model/model_connexion.php";
+    require "model/model_user.php";
 
     if(isset($_POST["pseudo"]) && isset($_POST["password"])) {
-        $user = new Users($_POST["pseudo"]);
-        $info = $user->get_user_infos();
+        $user = User::get_from_pseudo($_POST["pseudo"]);
 
-        if($info && password_verify($_POST["password"], $info["password"])) {
-            $_SESSION["id"] = $info["id"];
+        if($user && password_verify($_POST["password"], $user->password)) {
+            $_SESSION["id"] = $user->id;
             header("Location: /");
             exit;
         } else {

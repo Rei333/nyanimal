@@ -17,23 +17,23 @@
                     <div id="gauges">
                         <div>Energie :</div>
                         <div class="gauge">
-                            <div><?= $user["energy"] ?>%</div>
-                            <div class="filled_color" style="width:<?= $user["energy"] ?>%"></div>
+                            <div><?= $user->energy ?>%</div>
+                            <div class="filled_color" style="width:<?= $user->energy ?>%"></div>
                         </div>
                         <div>Satiété :</div>
                         <div class="gauge">
-                            <div><?= $user["satiety"] ?>%</div>
-                            <div class="filled_color" style="width:<?= $user["satiety"] ?>%"></div>
+                            <div><?= $user->satiety ?>%</div>
+                            <div class="filled_color" style="width:<?= $user->satiety ?>%"></div>
                         </div>
                         <div>Bonheur :</div>
                         <div class="gauge">
-                            <div><?= $user["hapiness"] ?>%</div>
-                            <div class="filled_color" style="width:<?= $user["hapiness"] ?>%"></div>
+                            <div><?= $user->hapiness ?>%</div>
+                            <div class="filled_color" style="width:<?= $user->hapiness ?>%"></div>
                         </div>
                         <div>Santé :</div>
                         <div class="gauge">
-                            <div><?= $user["health"] ?>%</div>
-                            <div class="filled_color" style="width:<?= $user["health"] ?>%"></div>
+                            <div><?= $user->health ?>%</div>
+                            <div class="filled_color" style="width:<?= $user->health ?>%"></div>
                         </div>
                     </div>
                     <aside>
@@ -41,14 +41,14 @@
                             <div id="triangle"></div>
                             <div id="house">
                                 <div id="up">
-                                    <div class="room <?php if(!$user["bathroom"]) { echo("locked"); } ?> " title="Salle de bain"></div>
-                                    <div class="room <?php if(!$user["bedroom"]) { echo("locked"); } ?> " title="Chambre"></div>
-                                    <div class="room <?php if(!$user["office"]) { echo("locked"); } ?> " title="Bureau"></div>
+                                    <div class="room <?php if(!$user->bathroom) { echo("locked"); } ?> " title="Salle de bain"></div>
+                                    <div class="room <?php if(!$user->bedroom) { echo("locked"); } ?> " title="Chambre"></div>
+                                    <div class="room <?php if(!$user->office) { echo("locked"); } ?> " title="Bureau"></div>
                                 </div>
                                 <div id="down">
                                     <div class="room active" title="Salon"></div>
-                                    <div class="room <?php if(!$user["dining_room"]) { echo("locked"); } ?> " title="Salle à manger"></div>
-                                    <div class="room <?php if(!$user["kitchen"]) { echo("locked"); } ?> " title="Cuisine"></div>
+                                    <div class="room <?php if(!$user->dining_room) { echo("locked"); } ?> " title="Salle à manger"></div>
+                                    <div class="room <?php if(!$user->kitchen) { echo("locked"); } ?> " title="Cuisine"></div>
                                 </div>
                             </div>
                         </div>
@@ -67,14 +67,14 @@
             <section id="appartment_view">
                 <div id="appartment">
                     <div id="wall" style="background-color: #FBDA65">
-                        <?php for ($i=0; $i<sizeof($furnitures); $i++) {
-                            if($furnitures[$i]["category"]=="Bureau") { ?>
-                            <img class="furnitures" id="bureau" src="<?= $furnitures[$i]["image"] ?>" alt="<?= $furnitures[$i]["category"] ?> <?= $furnitures[$i]["variation"] ?>">
-                        <?php }
-                        } ?>
-                        <?php for ($i=0; $i<sizeof($furnitures); $i++) {
-                            if($furnitures[$i]["category"]=="Commode") { ?>
-                            <img class="furnitures" id="commode" src="<?= $furnitures[$i]["image"] ?>" alt="<?= $furnitures[$i]["category"] ?> <?= $furnitures[$i]["variation"] ?>">
+                        <?php foreach ($furnitures as $furniture) {
+                            $furniture = $furniture->get_furniture();
+                            if($furniture->category == "Bureau") { ?>
+                                <img class="furnitures" id="bureau" src="<?= $furniture->image ?>" alt="<?= $furniture->category ?> <?= $furniture->variation ?>">
+                            <?php }
+
+                            if($furniture->category == "Commode") { ?>
+                                <img class="furnitures" id="commode" src="<?= $furniture->image ?>" alt="<?= $furniture->category ?> <?= $furniture->variation ?>">
                         <?php }
                         } ?>
                     </div>

@@ -64,11 +64,11 @@
 
                 <div id="shop">
                     <?php foreach($furnitures as $furniture) { ?>
-                        <article id="product_<?= $furniture['id'] ?>" onclick="selected_article(<?= $furniture['id'] ?>, `<?= $furniture['image'] ?>`)">
-                            <img class="product_img" src="<?= $furniture['image'] ?>" alt="<?= $furniture["category"] . " " . $furniture["variation"] ?>">
+                        <article id="product_<?= $furniture->id ?>" onclick="selected_article(<?= $furniture->id ?>, `<?= $furniture->image ?>`)">
+                            <img class="product_img" src="<?= $furniture->image ?>" alt="<?= $furniture->category . " " . $furniture->variation ?>">
                             <div class="tag">
-                                <span><?= $furniture["category"] . " " . $furniture["variation"] ?></span>
-                                <div><?= $furniture["price"] ?>
+                                <span><?= $furniture->category . " " . $furniture->variation ?></span>
+                                <div><?= $furniture->price ?>
                                     <img src="/img/coin.png" alt="pièces">
                                 </div>
                             </div>

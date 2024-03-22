@@ -26,7 +26,7 @@
             </section>
 
             <section id="presentation">
-                <h2>Découvrez Nyanimal en quelques images :</h2>
+                <h2>Découvre Nyanimal en quelques images :</h2>
                 <div>
                     <article>
                         <img src="img/connexion1.png" alt="Exemple maison">
